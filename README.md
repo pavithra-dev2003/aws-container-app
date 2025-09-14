@@ -11,13 +11,13 @@ The commands are used to build an image.
    
 2) Build the image using the name called javaimage and also give the tag called 100.
    ```
-   docker build -t iavaimage:100
+   docker build -t javaimage:100
    ```
-
-
+   ![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20000751.png?raw=true)
    
 3) After the build the image convert image into the container by using the run command using the detach mode and provide the container name as java and give port number and also mention the imagename.
    ```
    docker run -d --name java -p 8080:8080 javaimage:100
    ```
+   !
    
