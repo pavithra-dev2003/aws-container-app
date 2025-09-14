@@ -37,11 +37,14 @@ docker push  <username>/javaimage:100
 ```
 kubectl apply -f deployment.yaml
 ```
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20115343.png?raw=true)
+
 2) After applying the deployment file write the service file and apply the service command
 ```
 kubectl apply -f service
 
 ```
+![img alt]()
 
    
    
