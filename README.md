@@ -44,7 +44,7 @@ kubectl apply -f deployment.yaml
 kubectl apply -f service
 
 ```
-![img alt]()
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20151414.png?raw=true)
 
    
    
