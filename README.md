@@ -19,5 +19,12 @@ The commands are used to build an image.
    ```
    docker run -d --name java -p 8080:8080 javaimage:100
    ```
-   !
+   ![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20000904.png?raw=true)
+4) Login to the Docker Hub push the image to the docker hub
+    * docker javaimage <username>/javaimage:100 
+    * docker login 
+    * docker push  <username>/javaimage:100
+   ```
+   
+
    
