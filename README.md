@@ -7,7 +7,9 @@ The commands are used to build an image.
    ```
    mvn clean package
     ```
-![Main Menu Screenshot](C:\Users\Rangadeva R\Pictures\Screenshots\Screenshot 2025-09-13 235118.png)
+   ![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-13%20235118.png?raw=true)
+
+
 
 
 
