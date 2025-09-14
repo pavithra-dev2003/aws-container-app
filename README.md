@@ -1,4 +1,4 @@
-# aws-container-app
+# Aws-Container-App
 ## Containerized Application Deployment using Docker and Azure Kubernetes Service (AKS) with auto-scaling and monitoring setup using Prometheus and Grafana.
 # Containerization
 I have taken the simple java code and convert into the image.
@@ -21,10 +21,19 @@ The commands are used to build an image.
    ```
    ![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20000904.png?raw=true)
 4) Login to the Docker Hub push the image to the docker hub
-    * docker javaimage <username>/javaimage:100 
-    * docker login 
-    * docker push  <username>/javaimage:100
-   ```
+ ```
+ docker javaimage <username>/javaimage:100
+```
+```
+docker login
+``` 
+```
+docker push  <username>/javaimage:100
+```
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20005155.png?raw=true)
+
+
+   
    
 
    
