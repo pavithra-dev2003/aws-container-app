@@ -8,18 +8,18 @@ I have taken the simple java code and convert into the image. The commands are u
 ```
 mvn clean package
 ```
-![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-13%20144520.png?raw=true)  
+![image alt]()  
 2) Build the image using the name called javaimage and also give the tag called 100.
 ```
 docker build -t javaimage:100
 ```
-![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20144520.png?raw=true) 
+![image alt]
 
 3) After the build the image convert image into the container by using the run command using the detach mode and provide the container name as java and give port number and also mention the imagename.
 ```
 docker run -d --name java -p 8080:8080 javaimage:100
 ```
-![image alt]
+![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20000904.png?raw=true)
 4) Login to the Docker Hub push the image to the docker hub
 ```
 docker tag javaimage <username>/javaimage:100
