@@ -13,7 +13,7 @@ mvn clean package
 ```
 docker build -t javaimage:100
 ```
-![image alt]
+![image alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20000751.png?raw=true)
 
 3) After the build the image convert image into the container by using the run command using the detach mode and provide the container name as java and give port number and also mention the imagename.
 ```
