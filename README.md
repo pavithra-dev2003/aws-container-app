@@ -26,7 +26,7 @@ docker tag javaimage <username>/javaimage:100
 docker login
 docker push  <username>/javaimage:100
 ```
-![img alt]
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20005155.png?raw=true)
 # 2) Deployment (Orchestration) 
 1) Write the deployment file by taking the above image and apply this file by using the command kubectl
 ```
