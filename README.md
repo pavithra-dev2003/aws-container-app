@@ -36,4 +36,4 @@ kubectl apply -f deployment.yaml
 ```
 kubectl apply -f service
 ```
-![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20151414.png?raw=true) this is code i have write in the read me file this is correct or not if changes and give me back
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20151414.png?raw=true) 
