@@ -32,7 +32,7 @@ docker push  <username>/javaimage:100
 ```
 kubectl apply -f deployment.yaml
 ```
-![img alt]
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20115343.png?raw=true)
 ```
 kubectl apply -f service
 ```
