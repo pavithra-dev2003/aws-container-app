@@ -1,4 +1,6 @@
-# Aws-Container-App ## Containerized Application Deployment using Docker and Azure Kubernetes Service (AKS) with auto-scaling and monitoring setup using Prometheus and Grafana.
+# Aws-Container-App 
+
+## Containerized Application Deployment using Docker and Azure Kubernetes Service (AKS) with auto-scaling and monitoring setup using Prometheus and Grafana.
 
 # 1) Containerization 
 I have taken the simple java code and convert into the image. The commands are used to build an image. 
