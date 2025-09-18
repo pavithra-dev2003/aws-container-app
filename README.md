@@ -196,6 +196,8 @@ Dashboards
 * Pod Monitoring → Per-pod resource usage.
 * Application Metrics → Custom metrics from /metrics endpoint.
 * Alerting Rules → Email/Slack alerts when thresholds (e.g., CPU > 80%) are reached.=[
+  ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20174443.png?raw=true)
+  ![img alt]()
 
 
 
