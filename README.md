@@ -77,6 +77,7 @@ When is this needed?
 If you plan to use IAM roles for service accounts (IRSA).
 If your workloads need access to AWS services via IAM roles.
 If you are deploying AWS Load Balancer Controller, EBS CSI driver, or other AWS-integrated add-ons.
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20141835.png?raw=true)
 ![img alt]()
 
 
