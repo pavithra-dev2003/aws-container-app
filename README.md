@@ -133,7 +133,7 @@ Verify Installation
 kubectl get pods -l "app=prometheus"
 ```
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20154411.png?raw=true)
-!(img alt]()
+!(img alt](https://raw.githubusercontent.com/pavithra-dev2003/aws-container-app/f4240372eca39bee6decbc308b2b16228ab3d544/Screenshot%202025-09-18%20155050.png)
 
 ##  Access Prometheus Dashboard
 
