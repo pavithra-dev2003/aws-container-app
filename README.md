@@ -55,7 +55,18 @@ When prompted, provide the following:
 * Default output format → json (recommended)
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20140036.png?raw=true)
 
-
+## EKS Control Plane Creation
+When we create an Amazon EKS cluster, AWS provisions and manages the control plane for us.
+This includes:
+* Kubernetes API Server → Handles requests from kubectl or other tools.
+* etcd → Key-value store that saves cluster state and configuration.
+* Scheduler → Decides which node runs each pod
+* Controller Manager → Ensures the desired state of the cluster (like replicas, endpoints).
+The control plane runs across multiple Availability Zones to ensure high availability. AWS automatically scales and updates it when needed.
+```
+eksctl create cluster --name my-eks-cluster --region ap-south-1 --version 1.29 --nodes 2 --node-type t3.medium --nodes-min 2 --nodes-max 5
+```
+![img alt]()
 
 
 
