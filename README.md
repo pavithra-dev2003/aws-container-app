@@ -53,7 +53,7 @@ When prompted, provide the following:
 * AWS Secret Access Key → Your IAM user’s Secret Key
 * Default region name → Example: ap-south-1 (Mumbai), us-east-1 (N. Virginia)
 * Default output format → json (recommended)
-![img alt]()
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20140036.png?raw=true)
 
 
 
