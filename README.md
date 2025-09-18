@@ -67,6 +67,7 @@ The control plane runs across multiple Availability Zones to ensure high availab
 eksctl create cluster --name my-eks-cluster --region ap-south-1 --version 1.29 --nodes 2 --node-type t3.medium --nodes-min 2 --nodes-max 5
 ```
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20140036.png?raw=true)
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20142516.png?raw=true)
 #create oidc for eks
 ```
 eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster eksdemodeep --approve
