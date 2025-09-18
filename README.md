@@ -97,8 +97,104 @@ eksctl create nodegroup --cluster my-eks-cluster --name my-nodegroup --region ap
 * --managed → Creates a Managed Node Group (AWS manages upgrades & health)
 
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20153315.png?raw=true)
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20153046.png?raw=true)
+# Monitoring in EKS with Prometheus & Grafana
+
+To ensure observability of the application and the EKS cluster, we use two open-source monitoring tools: Prometheus and Grafana.
+
+# Prometheus
+ Overview
+* Prometheus is an open-source monitoring system that:
+* Collects and stores time-series metrics (CPU, memory, pod usage, etc.).
+* Supports PromQL (Prometheus Query Language) to filter and analyze data.
+
+* Provides alerting through Alertmanager.
+
+Ideal for Kubernetes monitoring because it integrates natively with kube-state-metrics and node-exporter.
+
+## Installation Steps
+
+Add Helm Repo
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+```
+
+Install Prometheus Stack
+```
+helm install prometheus prometheus-community/prometheus
+```
+edit svc file prometheus-server 
+```
+kubectl edit svc <serivcename>
+```
+Verify Installation
+```
+kubectl get pods -l "app=prometheus"
+```
 ![img alt]()
 
+##  Access Prometheus Dashboard
+
+Forward Prometheus service to local system:
+```
+kubectl port-forward svc/prometheus-server 9090:80
+```
+* Open http://localhost:9090
+Use PromQL queries to monitor metrics.
+```
+rate(node_cpu_seconds_total{mode="user"}[5m])
+node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes
+node_filesystem_size_bytes - node_filesystem_free_bytes
+```
+Example queries:
+* CPU Usage: rate(container_cpu_usage_seconds_total[5m])
+* Memory Usage: container_memory_usage_bytes
+* Pod Restarts: kube_pod_container_status_restarts_total
+
+# Grafana
+### Overview
+Grafana is an open-source visualization and analytics tool that:Connects to Prometheus as a data source.Displays metrics in interactive dashboards (graphs, charts, alerts).Supports user management, plugins, and integrations.
+
+## Installation Steps
+
+Install Grafana via Helm
+```
+helm install grafana grafana/grafana
+```
+
+Check Pods
+```
+kubectl get pods -l "app.kubernetes.io/name=grafana"
+```
+
+Access Grafana
+```
+kubectl port-forward svc/grafana 3000:80
+```
+
+Open http://localhost:3000
+.
+
+Default credentials:
+* username: admin
+* Password: admin (or check using kubectl get secret grafana -o jsonpath="{.data.admin-password}" | base64 --decode)
+
+## Configure Grafana
+
+Add Data Source → Prometheus (http://prometheus-server:80).
+Import Dashboards from Grafana Labs Marketplace
+
+* Kubernetes Cluster Monitoring (ID: 6417)
+* Node Exporter Dashboard (ID: 1860)
+* pod/Container Resource Usage
+
+Dashboards
+
+* Kubernetes Cluster Health → Node CPU, Memory, Disk.
+* Pod Monitoring → Per-pod resource usage.
+* Application Metrics → Custom metrics from /metrics endpoint.
+* Alerting Rules → Email/Slack alerts when thresholds (e.g., CPU > 80%) are reached.=[
 
 
 
