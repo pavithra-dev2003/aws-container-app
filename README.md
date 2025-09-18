@@ -96,6 +96,7 @@ eksctl create nodegroup --cluster my-eks-cluster --name my-nodegroup --region ap
 * --nodes-min / --nodes-max → Auto-scaling limits
 * --managed → Creates a Managed Node Group (AWS manages upgrades & health)
 
+![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20153315.png?raw=true)
 ![img alt]()
 
 
