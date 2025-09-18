@@ -37,3 +37,44 @@ kubectl apply -f deployment.yaml
 kubectl apply -f service
 ```
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-14%20151414.png?raw=true) 
+
+# Containerized Application Deployment on AWS EKS
+Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service provided by AWS. It makes it easy to run Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.
+# Configure AWS CLI with Access Key & Secret Key
+Before deploying to EKS/ECR, you need to configure AWS CLI with your credentials.
+* Run the AWS Configure Command
+```
+aws configure
+```
+#### Enter the Required Details
+When prompted, provide the following:
+
+* AWS Access Key ID → Your IAM user’s Access Key
+* AWS Secret Access Key → Your IAM user’s Secret Key
+* Default region name → Example: ap-south-1 (Mumbai), us-east-1 (N. Virginia)
+* Default output format → json (recommended)
+![img alt]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
