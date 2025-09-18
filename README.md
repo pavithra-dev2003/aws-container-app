@@ -80,7 +80,22 @@ If you are deploying AWS Load Balancer Controller, EBS CSI driver, or other AWS-
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20141835.png?raw=true)
 ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20142040.png?raw=true)
 
+## Creating a Node Group (Node Pool) in EKS
 
+In Amazon EKS, Node Groups (also called Node Pools) define the set of worker nodes that run your application pods. You can add more node groups for different workloads (e.g., general apps, monitoring, GPU workloads.
+```
+eksctl create nodegroup --cluster my-eks-cluster --name my-nodegroup --region ap-south-1 --node-type t3.medium --nodes 2 --nodes-min 2 --nodes-max 5 --managed
+```
+## Explanation of Flags
+* --cluster → Name of the existing EKS cluster
+* --name → Name of the node group
+* --region → AWS region
+* --node-type → EC2 instance type (e.g., t3.medium)
+* --nodes → Initial number of nodes
+* --nodes-min / --nodes-max → Auto-scaling limits
+* --managed → Creates a Managed Node Group (AWS manages upgrades & health)
+
+![img alt]()
 
 
 
