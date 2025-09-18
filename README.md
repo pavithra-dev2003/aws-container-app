@@ -197,8 +197,32 @@ Dashboards
 * Application Metrics → Custom metrics from /metrics endpoint.
 * Alerting Rules → Email/Slack alerts when thresholds (e.g., CPU > 80%) are reached.=[
   ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20174443.png?raw=true)
-  ![img alt]()
+  ![img alt](https://github.com/pavithra-dev2003/aws-container-app/blob/main/Screenshot%202025-09-18%20174710.png?raw=true)
 
+# Horizantal Pod Scalaing
+[imperative commad to apply hpa to perticular deploy]
+### HPA Imperative - Replace
+```
+kubectl autoscale deployment <deploymentname> --cpu-percent=20 --min=1 --max=10
+```
+
+### Generate Load
+
+# imperative template
+```
+kubectl run  load-test -i --tty --rm --image=httpd -- ab -n 500000 -c 1000 http://<svcname>.<namespace>.svc.cluster.local/
+
+
+kubectl run  load-test -i --tty --rm --image=httpd -- ab -n 500000 -c 1000 http://hpa-demo-service-nginx.default.svc.cluster.local/
+
+```
+;
+### explain
+ starts a new pod named "load-test" in Kubernetes using the specified image httpd(apache http server)
+ httpd image contains ab (Apache Benchmark), which is used for load testing. -n 500000 .....> Perform 500,000 total requests.  -c 1000 ....> Send 1,000 concurrent requests at a time.
+   
+   * http://hpa-demo-service-nginx.default.svc.cluster.local ...> Target service inside the Kubernetes cluster (HPA demo Nginx service).
+   * after loadtest finish pods will be scaled down as cpu consumption comes below 20 % it will scaled pod to 2 (cool down period 5 min)
 
 
 
